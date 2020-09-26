@@ -7,6 +7,7 @@ Wifi接続情報およびGoogleスプレッドシートのIDを入力する必�
 # 謝辞
 
 MH-Z19センサをM5StickCで動かす部分は，以下のコードを使用しました．
+
 https://kohacraft.com/archives/202001291230.html
 
 Wifi接続およびHTTTP POSTでGoogle スプレッドシートにデータを追加する部分，以下のサイトのコードを参考にしました．
