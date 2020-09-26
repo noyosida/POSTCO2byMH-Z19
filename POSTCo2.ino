@@ -5,7 +5,7 @@ const char* ssid     = "";
 const char* password = "";
 
 const String host = "script.google.com";   // コピーしたURLのホスト部
-const String url = "";  // URL後半部分
+const String url = "";  
 
 //MHZ19センサ用
 unsigned long getDataTimer = 0; //時間保持用
