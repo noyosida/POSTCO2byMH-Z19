@@ -7,11 +7,13 @@ const char* password = "";
 const String host = "script.google.com";   // コピーしたURLのホスト部
 const String url = "";  
 
+
 //MHZ19センサ用
 unsigned long getDataTimer = 0; //時間保持用
 const unsigned long getDataPeriod = 1000; //測定周期[ms]
 int CO2 = 400;
 int temperature = 20;
+int count = 0;
 
 //画面の明るさ
 bool lcdOn = false;
@@ -77,9 +79,12 @@ void loop() {
   M5.Lcd.drawRightString(str, M5.Lcd.width(), yLocation,4); yLocation+=24;
   M5.Lcd.drawRightString("['C] ", M5.Lcd.width(), yLocation,2); yLocation+=16;
 
-  postValues(CO2);
-   
-  delay(1800*1000);
+  if (count == 1800){
+    postValues(CO2);
+    count = 0;
+  } 
+  delay(1000);
+  count++;
 }
 
 void postValues(int CO2) {
